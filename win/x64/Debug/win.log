@@ -1,4 +1,4 @@
 ﻿  Fizika.cpp
-E:\Git\laboratory-TKO-simulation\win\Fizika.cpp(53,14): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+E:\Git\laboratory-TKO-simulation\win\Fizika.cpp(55,14): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   MyForm.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
   win.vcxproj -> E:\Git\laboratory-TKO-simulation\x64\Debug\wind.exe

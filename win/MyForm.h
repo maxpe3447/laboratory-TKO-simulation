@@ -785,11 +785,7 @@ private: System::Void textBox1_TextChanged_1(System::Object^ sender, System::Eve
 private: System::Void contextMenuStrip1_Opening(System::Object^ sender, System::ComponentModel::CancelEventArgs^ e) {
 }
 private: System::Void Laba_MouseHover(System::Object^ sender, System::EventArgs^ e) {
-	////label1->TextAlign = ContentAlignment::MiddleCenter;
-	//Laba->Text = "Error!!";
-	//Laba->ForeColor = Color::Red;
-	//MessageBox::Show("Написано же\nНЕтрогать!", "Fatal ERROR!",
-	//	MessageBoxButtons::OK, MessageBoxIcon::Error);
+
 }
 private: System::Void developerToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 	system("start chrome.exe github.com/maxpe3447");

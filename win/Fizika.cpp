@@ -1,5 +1,5 @@
 #include <iostream>
-#include <ctime>
+//#include <ctime>
 #include <cmath>
 #include "Rezistor.h"
 #include "Metalls.h"
@@ -20,6 +20,7 @@ using namespace System;
 			this->length = Decimal::ToDouble(length);
 			this->diametr = Decimal::ToDouble(diametr);
 			calc_S();
+			calc_R_zero();
 			calc_R();
 			calc_R_zero_termo();
 			calc_R_termo();
@@ -39,17 +40,18 @@ using namespace System;
 		Rezistor rez;
 		Metalls metal;
 
-		void calc_R_zero() {
-			R_zero = (metal.get_ro() * length) / 5;
-			
-		}
-
 		void calc_S() { 
 			diametr *= 0.001;
 			S = (PI * (diametr * diametr)) / 4;
 		}
 
+		void calc_R_zero() {
+			
+			R_zero = (metal.get_ro() * length) / S;
+		}
+
 		void calc_R() {
+
 			srand(time(NULL));
 			
 			for (int i = 0; i < 14; i++)
