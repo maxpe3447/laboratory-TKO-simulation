@@ -29,13 +29,13 @@ using namespace System;
 		double get_Diametr() const { return this->diametr; }
 		double get_ro() { return metal.get_ro(); }
 		double get_close_zone() { return  rez.get_close_zone(); }
-		int get_zero_error() const { return rand_error; }
+		int get_zero_error() const { return this->R_zero_termo; }
 
 	private:
-		double length, diametr, S;
+		double length{}, diametr{}, S{};
 		double R_zero{};
 		double rand_error{};
-		float R_zero_termo{};
+		int R_zero_termo{};
 		Rezistor rez;
 		Metalls metal;
 
@@ -51,10 +51,11 @@ using namespace System;
 
 		void calc_R() {
 			srand(time(NULL));
+			
 			for (int i = 0; i < 14; i++)
 			{
-				rand_error = (rand() % 9 + 1) *0.01;
-				R_arr[i] = R_zero * ((1 + metal.get_alpha() * Term[i]) / (1 + metal.get_alpha() * 20)) * 1000;
+				rand_error = (rand() % 9 + 1) * 0.01;
+				R_arr[i] = R_zero * ((1 + (double)metal.get_alpha() * Term[i]) / (1 + (double)metal.get_alpha() * 20)) * 1000;
 				R_arr[i] += rand_error;
 			}
 		}

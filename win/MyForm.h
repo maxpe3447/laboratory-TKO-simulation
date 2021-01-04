@@ -511,6 +511,7 @@ namespace win {
 			this->richTextBox1->Size = System::Drawing::Size(616, 554);
 			this->richTextBox1->TabIndex = 5;
 			this->richTextBox1->Text = L"";
+			this->richTextBox1->TextChanged += gcnew System::EventHandler(this, &MyForm::richTextBox1_TextChanged);
 			// 
 			// menuStrip1
 			// 
@@ -519,7 +520,7 @@ namespace win {
 			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->aboutProgramToolStripMenuItem });
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->Size = System::Drawing::Size(2202, 54);
+			this->menuStrip1->Size = System::Drawing::Size(1468, 33);
 			this->menuStrip1->TabIndex = 6;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
@@ -537,14 +538,14 @@ namespace win {
 			// developerToolStripMenuItem
 			// 
 			this->developerToolStripMenuItem->Name = L"developerToolStripMenuItem";
-			this->developerToolStripMenuItem->Size = System::Drawing::Size(270, 34);
+			this->developerToolStripMenuItem->Size = System::Drawing::Size(195, 34);
 			this->developerToolStripMenuItem->Text = L"Developer";
 			this->developerToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::developerToolStripMenuItem_Click);
 			// 
 			// exitToolStripMenuItem
 			// 
 			this->exitToolStripMenuItem->Name = L"exitToolStripMenuItem";
-			this->exitToolStripMenuItem->Size = System::Drawing::Size(270, 34);
+			this->exitToolStripMenuItem->Size = System::Drawing::Size(195, 34);
 			this->exitToolStripMenuItem->Text = L"Exit";
 			this->exitToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::exitToolStripMenuItem_Click);
 			// 
@@ -560,7 +561,6 @@ namespace win {
 			this->Controls->Add(this->Laba);
 			this->Controls->Add(this->menuStrip1);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
-			this->ImeMode = System::Windows::Forms::ImeMode::NoControl;
 			this->MainMenuStrip = this->menuStrip1;
 			this->Name = L"MyForm";
 			this->Text = L"MyForm";
@@ -768,7 +768,7 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 			for (int i = 0; i < 14; i++)
 				richTextBox1->AppendText("\t" + Convert::ToString(obj.Term[i])+"\t\t"+obj.R_arr[i].ToString("0.000")+"\t\t"+obj.R_termo[i].ToString("0.000") +"\n");
 			
-			richTextBox1->AppendText("\n\t\tRo = "+ obj.get_ro().ToString("0.000000000")+"\t\tEg = " +Convert::ToString(obj.get_close_zone())+"(eB)\n\t\t\t\t\tR0 = "+ Convert::ToString(obj.get_zero_error()) + "(Om)");
+			richTextBox1->AppendText("\n\t\tRo = "+ obj.get_ro().ToString("0.000000000")+"\t\tEg = " +Convert::ToString(obj.get_close_zone())+"(eB)\n\t\t\t\t\tR0 = "+ Convert::ToString(obj.get_zero_error())+ "(Om)");
 	}
 	else {
 		richTextBox1->ForeColor = Color::Red;
@@ -798,6 +798,8 @@ private: System::Void exitToolStripMenuItem_Click(System::Object^ sender, System
 	MyForm::Close();
 }
 private: System::Void aboutProgramToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void richTextBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }
