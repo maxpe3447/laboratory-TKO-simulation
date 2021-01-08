@@ -1,6 +1,6 @@
 <p align="center"><img src="Images/phiz.jpg" /></p>
 
-##About
+## About
 This program is <b>laboratory simulation</b> for student of university or other school with advance study of physics. You will be able to look and made laboratory work on the topic of "<em>TEMPERATURE DEPENDENCE OF ELECTRIC CONDUCTIVITY OF SOLIDS</em>". Interface of program is a window(create by c++), which have two option; first - dependence resistance of <samp>metal</samp>; second - dependence resistor of <samp>semiconductors</semp>.
 
 This simulation will help...
@@ -13,7 +13,7 @@ This simulation will help...
 
 
 
-##How it works
+## How it works
 
 <p align="center"><img src="Images/win_Prog.png" /></p>
 <p align = "center"><samp>Screenshot of the program</samp></p>
@@ -24,7 +24,7 @@ Next stage is press to button under the text field.
 
 You see a 2 columns with calculation result.
 
-##How to solve it
+## How to solve it
 
 <b>TASK 1</b>
 
