@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 #include "Fizika.cpp"
 namespace win {
 
@@ -10,7 +10,7 @@ namespace win {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Сводка для MyForm
+	/// РЎРІРѕРґРєР° РґР»СЏ MyForm
 	/// </summary>
 	public ref class MyForm : public System::Windows::Forms::Form
 	{
@@ -24,6 +24,12 @@ namespace win {
 	private: System::Windows::Forms::ToolStripMenuItem^ aboutProgramToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ developerToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ exitToolStripMenuItem;
+	private: System::Windows::Forms::Label^ label5;
+	private: System::Windows::Forms::Label^ label6;
+	private: System::Windows::Forms::BindingSource^ bindingSource1;
+
+
+
 
 	public:
 	private: System::Windows::Forms::Button^ button1;
@@ -32,13 +38,13 @@ namespace win {
 		{
 			InitializeComponent();
 			//
-			//TODO: добавьте код конструктора
+			//TODO: РґРѕР±Р°РІСЊС‚Рµ РєРѕРґ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°
 			//
 		}
 
 	protected:
 		/// <summary>
-		/// Освободить все используемые ресурсы.
+		/// РћСЃРІРѕР±РѕРґРёС‚СЊ РІСЃРµ РёСЃРїРѕР»СЊР·СѓРµРјС‹Рµ СЂРµСЃСѓСЂСЃС‹.
 		/// </summary>
 		~MyForm()
 		{
@@ -89,22 +95,26 @@ namespace win {
 
 	private:
 		/// <summary>
-		/// Обязательная переменная конструктора.
+		/// РћР±СЏР·Р°С‚РµР»СЊРЅР°СЏ РїРµСЂРµРјРµРЅРЅР°СЏ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°.
 		/// </summary>
 
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Требуемый метод для поддержки конструктора — не изменяйте 
-		/// содержимое этого метода с помощью редактора кода.
+		/// РўСЂРµР±СѓРµРјС‹Р№ РјРµС‚РѕРґ РґР»СЏ РїРѕРґРґРµСЂР¶РєРё РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР° вЂ” РЅРµ РёР·РјРµРЅСЏР№С‚Рµ 
+		/// СЃРѕРґРµСЂР¶РёРјРѕРµ СЌС‚РѕРіРѕ РјРµС‚РѕРґР° СЃ РїРѕРјРѕС‰СЊСЋ СЂРµРґР°РєС‚РѕСЂР° РєРѕРґР°.
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			this->components = (gcnew System::ComponentModel::Container());
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm::typeid));
 			this->Laba = (gcnew System::Windows::Forms::Label());
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
+			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->numericUpDown2 = (gcnew System::Windows::Forms::NumericUpDown());
 			this->numericUpDown1 = (gcnew System::Windows::Forms::NumericUpDown());
 			this->radioButton10 = (gcnew System::Windows::Forms::RadioButton());
 			this->radioButton9 = (gcnew System::Windows::Forms::RadioButton());
@@ -117,9 +127,6 @@ namespace win {
 			this->radioButton2 = (gcnew System::Windows::Forms::RadioButton());
 			this->radioButton1 = (gcnew System::Windows::Forms::RadioButton());
 			this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
-			this->label4 = (gcnew System::Windows::Forms::Label());
-			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->numericUpDown2 = (gcnew System::Windows::Forms::NumericUpDown());
 			this->radioButton11 = (gcnew System::Windows::Forms::RadioButton());
 			this->radioButton12 = (gcnew System::Windows::Forms::RadioButton());
 			this->radioButton13 = (gcnew System::Windows::Forms::RadioButton());
@@ -136,11 +143,15 @@ namespace win {
 			this->aboutProgramToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->developerToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->exitToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->bindingSource1 = (gcnew System::Windows::Forms::BindingSource(this->components));
 			this->groupBox1->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown1))->BeginInit();
 			this->groupBox2->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown2))->BeginInit();
 			this->menuStrip1->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// Laba
@@ -152,14 +163,17 @@ namespace win {
 			this->Laba->Name = L"Laba";
 			this->Laba->Size = System::Drawing::Size(334, 37);
 			this->Laba->TabIndex = 0;
-			this->Laba->Text = L"Лабораторная работа";
+			this->Laba->Text = L"Р›Р°Р±РѕСЂР°С‚РѕСЂРЅР°СЏ СЂР°Р±РѕС‚Р°";
 			this->Laba->Click += gcnew System::EventHandler(this, &MyForm::label1_Click);
 			this->Laba->MouseHover += gcnew System::EventHandler(this, &MyForm::Laba_MouseHover);
 			// 
 			// groupBox1
 			// 
+			this->groupBox1->Controls->Add(this->label4);
 			this->groupBox1->Controls->Add(this->label3);
+			this->groupBox1->Controls->Add(this->label2);
 			this->groupBox1->Controls->Add(this->label1);
+			this->groupBox1->Controls->Add(this->numericUpDown2);
 			this->groupBox1->Controls->Add(this->numericUpDown1);
 			this->groupBox1->Controls->Add(this->radioButton10);
 			this->groupBox1->Controls->Add(this->radioButton9);
@@ -173,10 +187,21 @@ namespace win {
 			this->groupBox1->Controls->Add(this->radioButton1);
 			this->groupBox1->Location = System::Drawing::Point(73, 158);
 			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Size = System::Drawing::Size(665, 265);
+			this->groupBox1->Size = System::Drawing::Size(665, 325);
 			this->groupBox1->TabIndex = 1;
 			this->groupBox1->TabStop = false;
-			this->groupBox1->Text = L"Выберите вариант";
+			this->groupBox1->Text = L"Р’С‹Р±РµСЂРёС‚Рµ РІР°СЂРёР°РЅС‚";
+			// 
+			// label4
+			// 
+			this->label4->AutoSize = true;
+			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label4->Location = System::Drawing::Point(401, 260);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(46, 25);
+			this->label4->TabIndex = 14;
+			this->label4->Text = L"РјРј";
 			// 
 			// label3
 			// 
@@ -189,6 +214,15 @@ namespace win {
 			this->label3->TabIndex = 6;
 			this->label3->Text = L"M";
 			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->Location = System::Drawing::Point(106, 264);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(151, 20);
+			this->label2->TabIndex = 13;
+			this->label2->Text = L"Р—Р°РґР°Р№С‚Рµ Р·РЅР°С‡РµРЅРёРµ";
+			// 
 			// label1
 			// 
 			this->label1->AutoSize = true;
@@ -196,7 +230,14 @@ namespace win {
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(151, 20);
 			this->label1->TabIndex = 13;
-			this->label1->Text = L"Задайте значение";
+			this->label1->Text = L"Р—Р°РґР°Р№С‚Рµ Р·РЅР°С‡РµРЅРёРµ";
+			// 
+			// numericUpDown2
+			// 
+			this->numericUpDown2->Location = System::Drawing::Point(275, 262);
+			this->numericUpDown2->Name = L"numericUpDown2";
+			this->numericUpDown2->Size = System::Drawing::Size(120, 26);
+			this->numericUpDown2->TabIndex = 12;
 			// 
 			// numericUpDown1
 			// 
@@ -214,7 +255,7 @@ namespace win {
 			this->radioButton10->Size = System::Drawing::Size(121, 24);
 			this->radioButton10->TabIndex = 11;
 			this->radioButton10->TabStop = true;
-			this->radioButton10->Text = L"Вариант 10";
+			this->radioButton10->Text = L"Р’Р°СЂРёР°РЅС‚ 10";
 			this->radioButton10->UseVisualStyleBackColor = true;
 			this->radioButton10->CheckedChanged += gcnew System::EventHandler(this, &MyForm::radioButton10_CheckedChanged);
 			// 
@@ -226,7 +267,7 @@ namespace win {
 			this->radioButton9->Size = System::Drawing::Size(112, 24);
 			this->radioButton9->TabIndex = 10;
 			this->radioButton9->TabStop = true;
-			this->radioButton9->Text = L"Вариант 9";
+			this->radioButton9->Text = L"Р’Р°СЂРёР°РЅС‚ 9";
 			this->radioButton9->UseVisualStyleBackColor = true;
 			this->radioButton9->CheckedChanged += gcnew System::EventHandler(this, &MyForm::radioButton9_CheckedChanged);
 			// 
@@ -238,7 +279,7 @@ namespace win {
 			this->radioButton8->Size = System::Drawing::Size(112, 24);
 			this->radioButton8->TabIndex = 9;
 			this->radioButton8->TabStop = true;
-			this->radioButton8->Text = L"Вариант 8";
+			this->radioButton8->Text = L"Р’Р°СЂРёР°РЅС‚ 8";
 			this->radioButton8->UseVisualStyleBackColor = true;
 			this->radioButton8->CheckedChanged += gcnew System::EventHandler(this, &MyForm::radioButton8_CheckedChanged);
 			// 
@@ -250,7 +291,7 @@ namespace win {
 			this->radioButton7->Size = System::Drawing::Size(112, 24);
 			this->radioButton7->TabIndex = 8;
 			this->radioButton7->TabStop = true;
-			this->radioButton7->Text = L"Вариант 7";
+			this->radioButton7->Text = L"Р’Р°СЂРёР°РЅС‚ 7";
 			this->radioButton7->UseVisualStyleBackColor = true;
 			this->radioButton7->CheckedChanged += gcnew System::EventHandler(this, &MyForm::radioButton7_CheckedChanged);
 			// 
@@ -262,7 +303,7 @@ namespace win {
 			this->radioButton6->Size = System::Drawing::Size(112, 24);
 			this->radioButton6->TabIndex = 7;
 			this->radioButton6->TabStop = true;
-			this->radioButton6->Text = L"Вариант 6";
+			this->radioButton6->Text = L"Р’Р°СЂРёР°РЅС‚ 6";
 			this->radioButton6->UseVisualStyleBackColor = true;
 			this->radioButton6->CheckedChanged += gcnew System::EventHandler(this, &MyForm::radioButton6_CheckedChanged);
 			// 
@@ -274,7 +315,7 @@ namespace win {
 			this->radioButton5->Size = System::Drawing::Size(112, 24);
 			this->radioButton5->TabIndex = 6;
 			this->radioButton5->TabStop = true;
-			this->radioButton5->Text = L"Вариант 5";
+			this->radioButton5->Text = L"Р’Р°СЂРёР°РЅС‚ 5";
 			this->radioButton5->UseVisualStyleBackColor = true;
 			this->radioButton5->CheckedChanged += gcnew System::EventHandler(this, &MyForm::radioButton5_CheckedChanged);
 			// 
@@ -286,7 +327,7 @@ namespace win {
 			this->radioButton4->Size = System::Drawing::Size(112, 24);
 			this->radioButton4->TabIndex = 5;
 			this->radioButton4->TabStop = true;
-			this->radioButton4->Text = L"Вариант 4";
+			this->radioButton4->Text = L"Р’Р°СЂРёР°РЅС‚ 4";
 			this->radioButton4->UseVisualStyleBackColor = true;
 			// 
 			// radioButton3
@@ -297,7 +338,7 @@ namespace win {
 			this->radioButton3->Size = System::Drawing::Size(112, 24);
 			this->radioButton3->TabIndex = 4;
 			this->radioButton3->TabStop = true;
-			this->radioButton3->Text = L"Вариант 3";
+			this->radioButton3->Text = L"Р’Р°СЂРёР°РЅС‚ 3";
 			this->radioButton3->UseVisualStyleBackColor = true;
 			this->radioButton3->CheckedChanged += gcnew System::EventHandler(this, &MyForm::radioButton3_CheckedChanged);
 			// 
@@ -309,7 +350,7 @@ namespace win {
 			this->radioButton2->Size = System::Drawing::Size(112, 24);
 			this->radioButton2->TabIndex = 3;
 			this->radioButton2->TabStop = true;
-			this->radioButton2->Text = L"Вариант 2";
+			this->radioButton2->Text = L"Р’Р°СЂРёР°РЅС‚ 2";
 			this->radioButton2->UseVisualStyleBackColor = true;
 			this->radioButton2->CheckedChanged += gcnew System::EventHandler(this, &MyForm::radioButton2_CheckedChanged);
 			// 
@@ -320,16 +361,12 @@ namespace win {
 			this->radioButton1->Name = L"radioButton1";
 			this->radioButton1->Size = System::Drawing::Size(112, 24);
 			this->radioButton1->TabIndex = 2;
-			this->radioButton1->TabStop = true;
-			this->radioButton1->Text = L"Вариант 1";
+			this->radioButton1->Text = L"Р’Р°СЂРёР°РЅС‚ 1";
 			this->radioButton1->UseVisualStyleBackColor = true;
 			this->radioButton1->CheckedChanged += gcnew System::EventHandler(this, &MyForm::radioButton1_CheckedChanged);
 			// 
 			// groupBox2
 			// 
-			this->groupBox2->Controls->Add(this->label4);
-			this->groupBox2->Controls->Add(this->label2);
-			this->groupBox2->Controls->Add(this->numericUpDown2);
 			this->groupBox2->Controls->Add(this->radioButton11);
 			this->groupBox2->Controls->Add(this->radioButton12);
 			this->groupBox2->Controls->Add(this->radioButton13);
@@ -340,39 +377,12 @@ namespace win {
 			this->groupBox2->Controls->Add(this->radioButton18);
 			this->groupBox2->Controls->Add(this->radioButton19);
 			this->groupBox2->Controls->Add(this->radioButton20);
-			this->groupBox2->Location = System::Drawing::Point(73, 450);
+			this->groupBox2->Location = System::Drawing::Point(73, 603);
 			this->groupBox2->Name = L"groupBox2";
-			this->groupBox2->Size = System::Drawing::Size(665, 265);
+			this->groupBox2->Size = System::Drawing::Size(665, 190);
 			this->groupBox2->TabIndex = 3;
 			this->groupBox2->TabStop = false;
-			this->groupBox2->Text = L"Выберите вариант";
-			// 
-			// label4
-			// 
-			this->label4->AutoSize = true;
-			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
-			this->label4->Location = System::Drawing::Point(401, 203);
-			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(46, 25);
-			this->label4->TabIndex = 14;
-			this->label4->Text = L"мм";
-			// 
-			// label2
-			// 
-			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(106, 207);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(151, 20);
-			this->label2->TabIndex = 13;
-			this->label2->Text = L"Задайте значение";
-			// 
-			// numericUpDown2
-			// 
-			this->numericUpDown2->Location = System::Drawing::Point(275, 205);
-			this->numericUpDown2->Name = L"numericUpDown2";
-			this->numericUpDown2->Size = System::Drawing::Size(120, 26);
-			this->numericUpDown2->TabIndex = 12;
+			this->groupBox2->Text = L"Р’С‹Р±РµСЂРёС‚Рµ РІР°СЂРёР°РЅС‚";
 			// 
 			// radioButton11
 			// 
@@ -382,7 +392,7 @@ namespace win {
 			this->radioButton11->Size = System::Drawing::Size(121, 24);
 			this->radioButton11->TabIndex = 11;
 			this->radioButton11->TabStop = true;
-			this->radioButton11->Text = L"Вариант 10";
+			this->radioButton11->Text = L"Р’Р°СЂРёР°РЅС‚ 10";
 			this->radioButton11->UseVisualStyleBackColor = true;
 			this->radioButton11->CheckedChanged += gcnew System::EventHandler(this, &MyForm::radioButton11_CheckedChanged);
 			// 
@@ -394,7 +404,7 @@ namespace win {
 			this->radioButton12->Size = System::Drawing::Size(112, 24);
 			this->radioButton12->TabIndex = 10;
 			this->radioButton12->TabStop = true;
-			this->radioButton12->Text = L"Вариант 9";
+			this->radioButton12->Text = L"Р’Р°СЂРёР°РЅС‚ 9";
 			this->radioButton12->UseVisualStyleBackColor = true;
 			this->radioButton12->CheckedChanged += gcnew System::EventHandler(this, &MyForm::radioButton12_CheckedChanged);
 			// 
@@ -406,7 +416,7 @@ namespace win {
 			this->radioButton13->Size = System::Drawing::Size(112, 24);
 			this->radioButton13->TabIndex = 9;
 			this->radioButton13->TabStop = true;
-			this->radioButton13->Text = L"Вариант 8";
+			this->radioButton13->Text = L"Р’Р°СЂРёР°РЅС‚ 8";
 			this->radioButton13->UseVisualStyleBackColor = true;
 			this->radioButton13->CheckedChanged += gcnew System::EventHandler(this, &MyForm::radioButton13_CheckedChanged);
 			// 
@@ -418,7 +428,7 @@ namespace win {
 			this->radioButton14->Size = System::Drawing::Size(112, 24);
 			this->radioButton14->TabIndex = 8;
 			this->radioButton14->TabStop = true;
-			this->radioButton14->Text = L"Вариант 7";
+			this->radioButton14->Text = L"Р’Р°СЂРёР°РЅС‚ 7";
 			this->radioButton14->UseVisualStyleBackColor = true;
 			this->radioButton14->CheckedChanged += gcnew System::EventHandler(this, &MyForm::radioButton14_CheckedChanged);
 			// 
@@ -430,7 +440,7 @@ namespace win {
 			this->radioButton15->Size = System::Drawing::Size(112, 24);
 			this->radioButton15->TabIndex = 7;
 			this->radioButton15->TabStop = true;
-			this->radioButton15->Text = L"Вариант 6";
+			this->radioButton15->Text = L"Р’Р°СЂРёР°РЅС‚ 6";
 			this->radioButton15->UseVisualStyleBackColor = true;
 			this->radioButton15->CheckedChanged += gcnew System::EventHandler(this, &MyForm::radioButton15_CheckedChanged);
 			// 
@@ -442,7 +452,7 @@ namespace win {
 			this->radioButton16->Size = System::Drawing::Size(112, 24);
 			this->radioButton16->TabIndex = 6;
 			this->radioButton16->TabStop = true;
-			this->radioButton16->Text = L"Вариант 5";
+			this->radioButton16->Text = L"Р’Р°СЂРёР°РЅС‚ 5";
 			this->radioButton16->UseVisualStyleBackColor = true;
 			this->radioButton16->CheckedChanged += gcnew System::EventHandler(this, &MyForm::radioButton16_CheckedChanged);
 			// 
@@ -454,7 +464,7 @@ namespace win {
 			this->radioButton17->Size = System::Drawing::Size(112, 24);
 			this->radioButton17->TabIndex = 5;
 			this->radioButton17->TabStop = true;
-			this->radioButton17->Text = L"Вариант 4";
+			this->radioButton17->Text = L"Р’Р°СЂРёР°РЅС‚ 4";
 			this->radioButton17->UseVisualStyleBackColor = true;
 			this->radioButton17->CheckedChanged += gcnew System::EventHandler(this, &MyForm::radioButton17_CheckedChanged);
 			// 
@@ -466,7 +476,7 @@ namespace win {
 			this->radioButton18->Size = System::Drawing::Size(112, 24);
 			this->radioButton18->TabIndex = 4;
 			this->radioButton18->TabStop = true;
-			this->radioButton18->Text = L"Вариант 3";
+			this->radioButton18->Text = L"Р’Р°СЂРёР°РЅС‚ 3";
 			this->radioButton18->UseVisualStyleBackColor = true;
 			this->radioButton18->CheckedChanged += gcnew System::EventHandler(this, &MyForm::radioButton18_CheckedChanged);
 			// 
@@ -478,7 +488,7 @@ namespace win {
 			this->radioButton19->Size = System::Drawing::Size(112, 24);
 			this->radioButton19->TabIndex = 3;
 			this->radioButton19->TabStop = true;
-			this->radioButton19->Text = L"Вариант 2";
+			this->radioButton19->Text = L"Р’Р°СЂРёР°РЅС‚ 2";
 			this->radioButton19->UseVisualStyleBackColor = true;
 			this->radioButton19->CheckedChanged += gcnew System::EventHandler(this, &MyForm::radioButton19_CheckedChanged);
 			// 
@@ -490,7 +500,7 @@ namespace win {
 			this->radioButton20->Size = System::Drawing::Size(112, 24);
 			this->radioButton20->TabIndex = 2;
 			this->radioButton20->TabStop = true;
-			this->radioButton20->Text = L"Вариант 1";
+			this->radioButton20->Text = L"Р’Р°СЂРёР°РЅС‚ 1";
 			this->radioButton20->UseVisualStyleBackColor = true;
 			this->radioButton20->CheckedChanged += gcnew System::EventHandler(this, &MyForm::radioButton20_CheckedChanged);
 			// 
@@ -515,7 +525,6 @@ namespace win {
 			// 
 			// menuStrip1
 			// 
-			this->menuStrip1->GripMargin = System::Windows::Forms::Padding(2, 2, 0, 2);
 			this->menuStrip1->ImageScalingSize = System::Drawing::Size(24, 24);
 			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->aboutProgramToolStripMenuItem });
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
@@ -549,11 +558,32 @@ namespace win {
 			this->exitToolStripMenuItem->Text = L"Exit";
 			this->exitToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::exitToolStripMenuItem_Click);
 			// 
+			// label5
+			// 
+			this->label5->AutoSize = true;
+			this->label5->Location = System::Drawing::Point(269, 114);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(89, 20);
+			this->label5->TabIndex = 7;
+			this->label5->Text = L"Р—Р°РґР°РЅРёРµ 1";
+			this->label5->Click += gcnew System::EventHandler(this, &MyForm::label5_Click);
+			// 
+			// label6
+			// 
+			this->label6->AutoSize = true;
+			this->label6->Location = System::Drawing::Point(269, 541);
+			this->label6->Name = L"label6";
+			this->label6->Size = System::Drawing::Size(89, 20);
+			this->label6->TabIndex = 8;
+			this->label6->Text = L"Р—Р°РґР°РЅРёРµ 2";
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1468, 732);
+			this->ClientSize = System::Drawing::Size(1468, 823);
+			this->Controls->Add(this->label6);
+			this->Controls->Add(this->label5);
 			this->Controls->Add(this->richTextBox1);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->groupBox2);
@@ -567,12 +597,13 @@ namespace win {
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			this->groupBox1->ResumeLayout(false);
 			this->groupBox1->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown2))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown1))->EndInit();
 			this->groupBox2->ResumeLayout(false);
 			this->groupBox2->PerformLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown2))->EndInit();
 			this->menuStrip1->ResumeLayout(false);
 			this->menuStrip1->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -598,11 +629,12 @@ namespace win {
 		  
 	private: System::Void radioButton1_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
 		this->task1 = 1;
+		//radioButton1->Select();
 		
 	}
 	private: System::Void radioButton2_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
 		this->task1 = 2;
-		
+		//radioButton2->Select();
 	}
 	private: System::Void radioButton3_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
 		this->task1 = 3;
@@ -644,28 +676,28 @@ namespace win {
 				   return Rezistor(0.74); //Ge
 				   break;
 			   case 3:
-				   return Rezistor(1.52); //AsGa
+				   return Rezistor(0.165); //PbSe
 				   break;
 			   case 4:
-				   return Rezistor(1.95); //Se
+				   return Rezistor(0.19); //PbTe
 				   break;
 			   case 5:
-				   return Rezistor(0.334); //Te
+				   return Rezistor(0.81); //GaSb
 				   break;
 			   case 6:
-				   return Rezistor(2.15); //BP
+				   return Rezistor(0.43); //InAs
 				   break;
 			   case 7:
-				   return Rezistor(2.5); //AlP
+				   return Rezistor(0.235); //InSb
 				   break;
 			   case 8:
-				   return Rezistor(2.24); //AlAs
+				   return Rezistor(0.29); //PbS
 				   break;
 			   case 9:
-				   return Rezistor(1.6); //AlSb
+				   return Rezistor(0.19); //PbTe
 				   break;
 			   case 10:
-				   return Rezistor(3.6); //GaN
+				   return Rezistor(0.3); //SnTe
 				   break;
 			   }
 		   }
@@ -763,19 +795,27 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 
 	if (task1 != 0 && task2 != 0 && numericUpDown1->Value != 0 && numericUpDown2->Value != 0) {
 
-			richTextBox1->AppendText("\t" + " \t\tЗадание 1" + "\tЗадание 2\n\n\t T" + " \t\tR(mOm)" + "\t\tR(MOm)\n");
+			richTextBox1->AppendText("\t" + " \t\tР—Р°РґР°РЅРёРµ 1" + "\tР—Р°РґР°РЅРёРµ 2\n\n\t T" + " \t\tR(mOm)" + "\t\tR(kOm)\n");
 
-			for (int i = 0; i < 14; i++)
-				richTextBox1->AppendText("\t" + Convert::ToString(obj.Term[i])+"\t\t"+obj.R_arr[i].ToString("0.000")+"\t\t"+obj.R_termo[i].ToString("0.000") +"\n");
+			for (int i = 0; i < 14; i++) {
+				if (task2 == 3 || task2 == 4 || task2 == 7 || task2 == 9)
+					richTextBox1->AppendText("\t" + Convert::ToString(obj.Term[i]) + "\t\t" + obj.R_arr[i].ToString("0.000") + "\t\t" + obj.R_termo[i].ToString("0.000000") + "\n");
+				else 
+					richTextBox1->AppendText("\t" + Convert::ToString(obj.Term[i]) + "\t\t" + obj.R_arr[i].ToString("0.000") + "\t\t" + obj.R_termo[i].ToString("0.000") + "\n");
+
+			}
+				
+			/*std::locale::global(std::locale(".866"));
+			std::wcout << L"Text1 \u2588 Text2\n \u03C1 ";*/
 			
-			richTextBox1->AppendText("\n\t\tRo = "+ obj.get_ro().ToString("0.000000000")+"\t\tEg = " +Convert::ToString(obj.get_close_zone())+"(eB)\n\t\t\t\t\tR0 = "+ Convert::ToString(obj.get_zero_error())+ "(Om)");
+			richTextBox1->AppendText("\n\t\t" + (L"\u03C1")+"o = "+ obj.get_ro().ToString("0.000000000")+"\t\tEg = " +Convert::ToString(obj.get_close_zone())+"(eB)\n\t\t\t\t\tR0 = "+(obj.get_zero_error()).ToString("0.000") + "(Om)");
 	}
 	else {
 		richTextBox1->ForeColor = Color::Red;
 		richTextBox1->Text = ("\n\t\t\tEROR!!");
 		Laba->ForeColor = Color::Red;
 
-		MessageBox::Show("Bыберите вариант и заполните данные!","Fatal Error!", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		MessageBox::Show("BС‹Р±РµСЂРёС‚Рµ РІР°СЂРёР°РЅС‚ Рё Р·Р°РїРѕР»РЅРёС‚Рµ РґР°РЅРЅС‹Рµ!","Fatal Error!", MessageBoxButtons::OK, MessageBoxIcon::Error);
 	} 
 
 }
@@ -796,6 +836,12 @@ private: System::Void exitToolStripMenuItem_Click(System::Object^ sender, System
 private: System::Void aboutProgramToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void richTextBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void label5_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void radioButton21_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+	this->task1 = 1;
+	radioButton1->Select();
 }
 };
 }

@@ -30,13 +30,13 @@ using namespace System;
 		double get_Diametr() const { return this->diametr; }
 		double get_ro() { return metal.get_ro(); }
 		double get_close_zone() { return  rez.get_close_zone(); }
-		int get_zero_error() const { return this->R_zero_termo; }
+		double get_zero_error() const { return this->R_zero_termo; }
 
 	private:
 		double length{}, diametr{}, S{};
 		double R_zero{};
 		double rand_error{};
-		int R_zero_termo{};
+		double R_zero_termo{};
 		Rezistor rez;
 		Metalls metal;
 
@@ -62,7 +62,9 @@ using namespace System;
 			}
 		}
 
-		void calc_R_zero_termo() { R_zero_termo = rand() % 30000 + 20000; }
+		void calc_R_zero_termo() { R_zero_termo = rand() % 500 + 500; 
+		R_zero_termo /= 1000;
+		}
 
 		void calc_R_termo() {
 			short Kelvin = 273;
@@ -70,7 +72,7 @@ using namespace System;
 
 			for (int  i = 0; i < 14; i++)
 			{
-				R_termo[i] = R_zero_termo * exp(5797.0*Eg/(Term[i]+Kelvin)) * 0.000001;
+				R_termo[i] = R_zero_termo * 0.001 * exp(5797.0 * Eg / (Term[i] + Kelvin));
 			}
 		}
 	};
