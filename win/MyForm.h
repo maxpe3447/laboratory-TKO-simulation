@@ -525,11 +525,12 @@ namespace win {
 			// 
 			// menuStrip1
 			// 
+			this->menuStrip1->GripMargin = System::Windows::Forms::Padding(2, 2, 0, 2);
 			this->menuStrip1->ImageScalingSize = System::Drawing::Size(24, 24);
 			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->aboutProgramToolStripMenuItem });
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->Size = System::Drawing::Size(1468, 33);
+			this->menuStrip1->Size = System::Drawing::Size(2202, 54);
 			this->menuStrip1->TabIndex = 6;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
@@ -540,7 +541,7 @@ namespace win {
 					this->exitToolStripMenuItem
 			});
 			this->aboutProgramToolStripMenuItem->Name = L"aboutProgramToolStripMenuItem";
-			this->aboutProgramToolStripMenuItem->Size = System::Drawing::Size(158, 29);
+			this->aboutProgramToolStripMenuItem->Size = System::Drawing::Size(158, 50);
 			this->aboutProgramToolStripMenuItem->Text = L"About program ";
 			this->aboutProgramToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::aboutProgramToolStripMenuItem_Click);
 			// 
@@ -561,9 +562,11 @@ namespace win {
 			// label5
 			// 
 			this->label5->AutoSize = true;
+			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
 			this->label5->Location = System::Drawing::Point(269, 114);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(89, 20);
+			this->label5->Size = System::Drawing::Size(197, 44);
 			this->label5->TabIndex = 7;
 			this->label5->Text = L"Задание 1";
 			this->label5->Click += gcnew System::EventHandler(this, &MyForm::label5_Click);
@@ -571,9 +574,11 @@ namespace win {
 			// label6
 			// 
 			this->label6->AutoSize = true;
+			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
 			this->label6->Location = System::Drawing::Point(269, 541);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(89, 20);
+			this->label6->Size = System::Drawing::Size(197, 44);
 			this->label6->TabIndex = 8;
 			this->label6->Text = L"Задание 2";
 			// 
