@@ -1,10 +1,2 @@
-﻿  MyForm.cpp
-E:\Git\laboratory-TKO-simulation\win\Fizika.cpp(55,14): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  Fizika.cpp
-E:\Git\laboratory-TKO-simulation\win\Fizika.cpp(55,14): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  .NETFramework,Version=v4.7.2.AssemblyAttributes.cpp
-  Generating Code...
-E:\Git\laboratory-TKO-simulation\win\MyForm.h(703): warning C4715: 'win::MyForm::CheckTermoStatus': not all control paths return a value
-E:\Git\laboratory-TKO-simulation\win\MyForm.h(782): warning C4715: 'win::MyForm::CheckMetalStatus': not all control paths return a value
-  MyForm.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+﻿  MyForm.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
   win.vcxproj -> E:\Git\laboratory-TKO-simulation\Release\wind.exe
