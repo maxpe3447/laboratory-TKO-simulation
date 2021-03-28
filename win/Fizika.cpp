@@ -69,10 +69,11 @@ using namespace System;
 		void calc_R_termo() {
 			short Kelvin = 273;
 			double Eg = rez.get_close_zone();
+			double y = rez.get_y();
 
 			for (int  i = 0; i < 14; i++)
 			{
-				R_termo[i] = R_zero_termo * 0.001 * exp(5797.0 * Eg / (Term[i] + Kelvin));
+				R_termo[i] = R_zero_termo * 0.001 * exp(5797.0 * (Eg - y * (Term[i] + Kelvin)) / (Term[i] + Kelvin));
 			}
 		}
 	};

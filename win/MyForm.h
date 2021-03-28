@@ -660,37 +660,37 @@ namespace win {
 		this->task1 = 10;
 	}
 		   Rezistor CheckTermoStatus() {
-			   switch (task1)
+			   switch (task2)
 			   {
 			   case 1:
-				   return Rezistor(1.166); //Si
+				   return Rezistor(1.166, 1.533 * std::pow(10, -4)); //Si
 				   break;
 			   case 2:
-				   return Rezistor(0.74); //Ge
+				   return Rezistor(0.74, 2.333 * std::pow(10, -4)); //Ge
 				   break;
 			   case 3:
-				   return Rezistor(0.165); //PbSe
+				   return Rezistor(0.334, 0.467 * std::pow(10, -4)); //Te
 				   break;
 			   case 4:
-				   return Rezistor(0.19); //PbTe
+				   return Rezistor(0.81, 4.0 * std::pow(10, -4)); //GaSb
 				   break;
 			   case 5:
-				   return Rezistor(0.81); //GaSb
+				   return Rezistor(0.43, 2.333 * std::pow(10, -4)); //InAs
 				   break;
 			   case 6:
-				   return Rezistor(0.43); //InAs
+				   return Rezistor(0.235, 1.833 * std::pow(10, -4)); //InSb
 				   break;
 			   case 7:
-				   return Rezistor(0.235); //InSb
+				   return Rezistor(0.29, -4.0 * std::pow(10, -4)); //PbS
 				   break;
 			   case 8:
-				   return Rezistor(0.29); //PbS
+				   return Rezistor(0.165, -2.5 * std::pow(10, -4)); //PbSe
 				   break;
 			   case 9:
-				   return Rezistor(0.19); //PbTe
+				   return Rezistor(0.19, -4.0 * std::pow(10, -4)); //PbTe
 				   break;
 			   case 10:
-				   return Rezistor(0.3); //SnTe
+				   return Rezistor(0.3, 5.667 * std::pow(10, -4)); //SnTe
 				   break;
 			   }
 		   }
@@ -742,34 +742,34 @@ namespace win {
 			   switch (task1)
 			   {
 			   case 1:
-				   return Metalls(0.000000017, 0.0043); // Cuprum
+				   return Metalls(1.59 * std::pow(10, -8), 3.8 * std::pow(10, -3)); // Ag
 				   break;
 			   case 2:
-				   return Metalls(0.000000028, 0.0042); // Al
+				   return Metalls(1.68 * std::pow(10, -8), 3.9 * std::pow(10, -3)); // Cu
 				   break;
 			   case 3:
-				   return Metalls(0.0000011, 0.0001); // Ni
+				   return Metalls(2.44 * std::pow(10, -8), 3.4 * std::pow(10, -3)); // Au
 				   break;
 			   case 4:
-				   return Metalls(0.0000011, 0.0001); // NiCh
+				   return Metalls(2.82 * std::pow(10, -8), 3.9 * std::pow(10, -3)); // Al
 				   break;
 			   case 5:
-				   return Metalls(0.00000012, 0.0043); // Steel
+				   return Metalls(5.6 * std::pow(10, -8), 4.5 * std::pow(10, -3)); // W
 				   break;
 			   case 6:
-				   return Metalls(0.000000055, 0.0048); // Steel
+				   return Metalls(5.9 * std::pow(10, -8), 3.7 * std::pow(10, -3)); // Zn
 				   break;
 			   case 7:
-				   return Metalls(0.000000055, 0.0048); // Cuprum
+				   return Metalls(6.99 * std::pow(10, -8), 6 * std::pow(10, -3)); // Ni
 				   break;
 			   case 8:
-				   return Metalls(0.000000055, 0.0048); // Cuprum
+				   return Metalls(10 * std::pow(10, -8), 5 * std::pow(10, -3)); // Fe
 				   break;
 			   case 9:
-				   return Metalls(0.000000028, 0.0042); // Al
+				   return Metalls(10.6 * std::pow(10, -8), 3.9 * std::pow(10, -3)); // Pt
 				   break;
 			   case 10:
-				   return Metalls(0.0000011, 0.0001); // NiCh
+				   return Metalls(22 * std::pow(10, -8), 3.9 * std::pow(10, -3)); // Pb
 				   break;
 			   }
 		   }
